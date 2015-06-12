@@ -21,6 +21,7 @@
     //****************************
     function Particle() {
         this.color = colorArray[ Math.floor((Math.random() * 5)) + 1 ];
+        this.alpha = 1;
         this.x = Math.random() * W;
         this.y = Math.random() * H;
 
@@ -32,7 +33,7 @@
         this.vx = 1 * Math.random() + 1;
         this.vy = 1 * Math.random() + 1;
 
-        this.radius = .1 * Math.random() + 1.5;
+        this.radius = .1 * Math.random() + 2.5;
     };
 
 
@@ -46,6 +47,9 @@
     Particle.prototype.move = function () {
         this.x += this.vx * this.direction.x;
         // this.y += this.vy * this.direction.y;
+        if(this.direction.x > 0) {
+
+        }
     };
 
     Particle.prototype.changeDirection = function (axis) {
@@ -55,6 +59,7 @@
     Particle.prototype.draw = function() {
         ctx.beginPath();
         ctx.fillStyle = this.color;
+        ctx.globalAlpha = this.alpha;
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         ctx.fill();
     };
@@ -63,9 +68,11 @@
         if (this.x >= W) {
             this.x = W;
             this.changeDirection("x");
+            this.alpha = .5;
         } else if (this.x <= 0) {
             this.x = 0;
             this.changeDirection("x");
+            this.alpha = 1;
         };
 
         if (this.y >= H) {
