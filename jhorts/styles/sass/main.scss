@@ -1,0 +1,15 @@
+@import 'partials/media-queries';
+@import 'partials/variables';
+@import 'partials/fonts';
+@import 'partials/preloader';
+@import 'partials/header';
+@import 'partials/main-content';
+@import 'partials/hello-urban';
+
+body.timlauter {
+    margin: 0;
+    font-size: 1em;
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $sans-serif;
+    }
+}
