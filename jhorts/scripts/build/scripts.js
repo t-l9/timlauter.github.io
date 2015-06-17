@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     this.Banner = function() {
 
         // constants
-        this.width = 50;
+        this.width = 100;
 
         // default properties
         var defaults = {

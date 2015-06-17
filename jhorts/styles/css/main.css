@@ -1,14 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 @media only screen and (max-width: 768px) {
   body.timlauter .helloUrban {
-    width: 100% !important;
-            /*
-
-            !important is poor practice, but I made an
-            exception to override a constant I created in
-            my helloURBN plugin.
-
-            */ }
+    font-size: .75em;
+    padding-left: 35px; }
+    body.timlauter .helloUrban button.collapse {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 90; }
   body.timlauter header.timlauter {
     display: block;
     width: 100%;
@@ -105,7 +104,8 @@ body.timlauter header {
   width: 50vw;
   height: 100vh;
   color: #ffffff;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden; }
   body.timlauter header img {
     width: 40px;
     border: solid 1px #ffffff;
@@ -169,7 +169,8 @@ body.timlauter main {
   right: 0;
   bottom: 0;
   left: 50%;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden; }
   body.timlauter main section#output.wrapper {
     display: table-cell;
     vertical-align: middle;
@@ -216,15 +217,16 @@ body.timlauter main {
 .helloUrban {
   color: #fff;
   font-weight: 700;
+  font-size: 1.25em;
   font-family: "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  height: 65px;
-  width: 50%;
-  line-height: 65px;
+  height: 90px;
+  line-height: 90px;
   text-align: center;
   position: fixed;
   z-index: 0;
   opacity: 0;
-  top: -65px;
+  top: -90px;
+  overflow: hidden;
   -webkit-transition: all .4s ease-in-out;
   -moz-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;
@@ -240,12 +242,14 @@ body.timlauter main {
   transition: all .4s ease-in-out; }
 
 .helloUrban button {
+  position: absolute;
+  left: 0;
   font-size: 24px;
   font-weight: 700;
-  line-height: 12px;
-  margin: 20px 0 0 25px;
+  line-height: 24px;
+  margin: 25px 0 0 25px;
   float: left;
-  padding: 5px 7px 10px;
+  padding: 5px 14px 10px;
   cursor: pointer;
   color: #fff;
   border: 0;

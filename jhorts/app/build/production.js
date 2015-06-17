@@ -34,13 +34,8 @@ angular.module('forecastCtrl', ['weatherService'])
                     degree.style.visibility = 'visible';
                 }
 
-                if (navigator.userAgent.search("Firefox")) {
-                    console.log('ff');
-                }
-
             })
             .error(function(data) {
-                console.log('error');
                 preloader.style.display = 'none';
                 $scope.error = 'Ahh shoot, we are encountering some technical difficulties.';
             });
@@ -81,7 +76,7 @@ angular.module('forecastCtrl', ['weatherService'])
                         alert("No results found");
                     }
                 } else {
-                    alert("Geocoder failed due to: " + status);
+                    alert("Our geolocation failed due to: " + status);
                 }
             });
         }
@@ -95,7 +90,7 @@ angular.module('forecastCtrl', ['weatherService'])
 
     function error(err) {
         preloader.style.display = 'none';
-        $scope.error = "Ahh shoot, you couldn\'t find you. Try entering your location.";
+        $scope.error = "Ahh shoot, we couldn\'t find you. Try entering your location.";
         $scope.$apply();
     }
 

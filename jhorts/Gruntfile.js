@@ -56,11 +56,11 @@ module.exports = function(grunt) {
 				options: {
 					spawn: false
 				},
-				tasks: ['concat', 'uglify', 'cssmin']
+				tasks: ['concat', 'uglify', 'jshint']
 			},
             css: {
 				files: 'styles/sass/**/*.scss',
-				tasks: ['sass']
+				tasks: ['sass', 'cssmin']
 			}
 		}
 

@@ -1,14 +1,14 @@
 @media only screen and (max-width: 768px) {
     body.timlauter {
         .helloUrban {
-            width: 100% !important;
-            /*
-
-            !important is poor practice, but I made an
-            exception to override a constant I created in
-            my helloURBN plugin.
-
-            */
+            font-size: .75em;
+            padding-left: 35px;
+            button.collapse {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 90;
+            }
         }
         header.timlauter {
             display: block;

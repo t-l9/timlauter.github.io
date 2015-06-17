@@ -8,11 +8,11 @@ Structure your app as you see fit. Connect to the API via xmlhttprequest, $.ajax
 
 ###Bonus points###
 
-*   API error handling         ----- X
-*   Compressed js              ----- X
-*   CSS supersets (sass/less)  ----- X
-*   Use a grid for layout      ----- X
+*   API error handling
+*   Compressed js
+*   CSS supersets (sass/less)
+*   Use a grid for layout
 *   JavaScript tests
-*   Native js                  ----- X
-*   Task runner (grunt/gulp)   ----- X
-*   Automation a big plus!     ----- X
+*   Native js
+*   Task runner (grunt/gulp)
+*   Automation a big plus!
