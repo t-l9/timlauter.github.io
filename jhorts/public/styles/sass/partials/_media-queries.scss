@@ -1,0 +1,39 @@
+// iPad
+@media only screen and (max-width: 768px) {
+    body.timlauter {
+        .helloUrban {
+            button.collapse {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 90;
+            }
+        }
+        header.timlauter {
+            display: block;
+            width: 100%;
+            height: initial;
+            #input.wrapper {
+                width: 100vw;
+            }
+        }
+        main.timlauter {
+            position: relative;
+            width: 100%;
+            left: initial;
+            #output.wrapper {
+                width: 100vw;
+            }
+        }
+    }
+}
+
+
+// iPhone 4
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    #output {
+        padding: 50px 0;
+    }
+}

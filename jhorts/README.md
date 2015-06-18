@@ -10,9 +10,9 @@ Structure your app as you see fit. Connect to the API via xmlhttprequest, $.ajax
 
 *   API error handling
 *   Compressed js
-*   CSS supersets (sass/less)
+*   CSS supersets
 *   Use a grid for layout
 *   JavaScript tests
 *   Native js
 *   Task runner (grunt/gulp)
-*   Automation a big plus!
+*   Automation a big plus! 

@@ -1,0 +1,87 @@
+body.timlauter {
+    header {
+        background: #8a8bc9;
+        background: rgba(138,139,201,1);
+        background: -moz-linear-gradient(top, rgba(138,139,201,1) 0%, rgba(108,112,157,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(138,139,201,1)), color-stop(100%, rgba(108,112,157,1)));
+        background: -webkit-linear-gradient(top, rgba(138,139,201,1) 0%, rgba(108,112,157,1) 100%);
+        background: -o-linear-gradient(top, rgba(138,139,201,1) 0%, rgba(108,112,157,1) 100%);
+        background: -ms-linear-gradient(top, rgba(138,139,201,1) 0%, rgba(108,112,157,1) 100%);
+        background: linear-gradient(to bottom, rgba(138,139,201,1) 0%, rgba(108,112,157,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a8bc9', endColorstr='#6c709d', GradientType=0 );
+
+        position: relative;
+        display: table;
+        width: 50vw;
+        height: 100vh;
+        color: $white;
+        text-align: center;
+        overflow: hidden;
+        img {
+            width: 40px;
+            border: solid 1px $white;
+            cursor: pointer;
+            padding: 5px;
+            position: absolute;
+            z-index: 2;
+            top: 25px;
+            left: 25px;
+            -webkit-transition: .2s ease-in-out;
+            -moz-transition: .2s ease-in-out;
+            -o-transition: .2s ease-in-out;
+            transition: .2s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                padding: 3px;
+                border-color: transparent;
+            }
+        }
+        section#input.wrapper {
+            height: 100vh;
+            width: 50vw;
+            display: table-cell;
+            vertical-align: middle;
+            h1 {
+                color: $white;
+                font-size: 3em;
+                font-weight: 700;
+                margin: 0 0 25px 0;
+            }
+            input[type='text'] {
+                background-color: $white;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                font-weight: 700;
+                margin: 0 0 25px 0;
+                padding-left: 15px;
+                color: $gray;
+                &:required {
+                    background-color: $white;
+                }
+            }
+            button.button.postfix {
+                background-color: #41aec9;
+                border: none;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                padding: 0;
+                outline: none;
+                &:hover {
+                    background: #3ba0b9;
+                }
+            }
+            #tagline {
+                font-style: italic;
+                opacity: .65;
+            }
+        }
+        #signature {
+            position: absolute;
+            right: 0;
+            bottom: 20px;
+            left: 0;
+            font-size: .65em;
+            opacity: .4;
+        }
+    }
+}

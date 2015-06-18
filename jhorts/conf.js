@@ -3,8 +3,6 @@ exports.config = {
     specs: ['tests/spec.js'],
     multiCapabilities: [{
         browserName: 'chrome'
-    }, {
-        browserName: 'safari'
     }],
     jasmineNodeOpts: {
         isVerbose: true,

@@ -5,27 +5,27 @@ module.exports = function(grunt) {
 		concat: {
 			angular: {
 				src: [
-					'app/controllers/forecastCtrl.js',
-					'app/services/weatherService.js',
-					'app/app.routes.js',
-					'app/app.js'
+					'public/app/controllers/forecastCtrl.js',
+					'public/app/services/weatherService.js',
+					'public/app/app.routes.js',
+					'public/app/app.js'
 				],
-				dest: 'app/build/production.js',
+				dest: 'public/app/build/production.js',
 			},
 			scripts: {
 				src: [
-					'scripts/main.js',
-					'scripts/helloUrban.js'
+					'public/scripts/main.js',
+					'public/scripts/helloUrban.js'
 				],
-				dest: 'scripts/build/scripts.js'
+				dest: 'public/scripts/build/scripts.js'
 			}
 		},
 
 		uglify: {
 			my_target: {
 		    	files: {
-		    		'app/build/production.min.js': ['app/build/production.js'],
-					'scripts/build/scripts.min.js': ['scripts/build/scripts.js']
+		    		'public/app/build/production.min.js': ['public/app/build/production.js'],
+					'public/scripts/build/scripts.min.js': ['public/scripts/build/scripts.js']
 		      	}
 			}
 		},
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
 		cssmin: {
 			target: {
 		    	files: {
-		      		'styles/build/main.min.css': ['styles/css/main.css']
+		      		'public/styles/build/main.min.css': ['public/styles/css/main.css']
 		    	}
 		  	}
 		},
@@ -41,25 +41,25 @@ module.exports = function(grunt) {
         sass: {
 			dist: {
 				files: {
-					'styles/css/main.css' : 'styles/sass/main.scss'
+					'public/styles/css/main.css' : 'public/styles/sass/main.scss'
 				}
 			}
 		},
 
 		jshint: {
-		    all: ['Gruntfile.js', 'app/*.js', 'app/controllers/*.js', 'app/services/*.js', 'scripts/*.js']
+		    all: ['Gruntfile.js', 'app/*.js', 'public/app/controllers/*.js', 'public/app/services/*.js', 'public/scripts/*.js']
 		},
 
 		watch: {
 			scripts: {
-				files: ['app/**/*.js', 'Gruntfile.js', 'scripts/*.js'],
+				files: ['public/app/**/*.js', 'Gruntfile.js', 'public/scripts/*.js'],
 				options: {
 					spawn: false
 				},
 				tasks: ['concat', 'uglify', 'jshint']
 			},
             css: {
-				files: 'styles/sass/**/*.scss',
+				files: 'public/styles/sass/**/*.scss',
 				tasks: ['sass', 'cssmin']
 			}
 		}

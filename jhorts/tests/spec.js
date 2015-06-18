@@ -1,8 +1,10 @@
+browser.driver.get('http://localhost:8000/');
+
 var Banner = function()  {
     this.c2a = element(by.id('logo'));
     this.banner = element(by.css('.helloUrban'));
     this.bannerBtn = element(by.css('.collapse'));
-    this.url = 'http://localhost/test-app-tim-lauter';
+    this.url = 'http://localhost:8000/';
 
     this.hasClass = function (element, cssClass) {
         return element.getAttribute('class').then(function (classes) {
@@ -33,22 +35,20 @@ describe('dropdown banner', function() {
 
 describe('location input', function() {
     it('submits location', function() {
-      var error = 'Ahh shoot, you couldn\'t find you. Try entering your location.';
       var locationForm = new LocationForm();
       locationForm.submit('Austin, TX');
 
-      setTimeout(function() {
+      browser.waitForAngular(function() {
           expect(this.output.getText()).toEqual('Austin, TX');
-      }, 5000);
+      });
     });
 });
 
 describe('onload', function() {
     it('provides user location', function() {
         this.output = element(by.id('location'));
-
-        setTimeout(function() {
+        browser.waitForAngular(function() {
             expect(this.output.getText()).toEqual(String);
-        }, 5000);
+        });
     });
 });
